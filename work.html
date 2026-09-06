@@ -4,323 +4,1029 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A collection of web development and design projects by Cresadel M. Dela Cruz.">
-    <meta name="author" content="Cresadel M. Dela Cruz">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Cresadel Dela Cruz — Selected projects, school works, and creative projects."
+    >
+
+    <meta
+        name="author"
+        content="Cresadel M. Dela Cruz"
+    >
 
     <title>Work | Cresadel Dela Cruz</title>
 
-    <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Work | Cresadel Dela Cruz">
-    <meta property="og:description" content="A collection of web development and design projects by Cresadel M. Dela Cruz.">
-
-    <!-- FAVICON -->
-    <link rel="icon" href="images/favicon.ico">
 
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
+
 <body>
 
-    <!-- SKIP LINK -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- NAVIGATION -->
-    <header class="navbar">
-        <div class="nav-container">
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
 
-            <!-- LOGO -->
-            <a href="index.html" class="logo" aria-label="Cresadel Dela Cruz Home">
-                <img src="images/logo.png" alt="Cresadel Dela Cruz Logo">
-            </a>
+    <div
+        class="loader"
+        id="loader"
+        aria-hidden="true"
+    >
 
-            <nav aria-label="Main Navigation">
-                <a href="index.html">Home</a>
-                <a href="work.html" class="active" aria-current="page">Work</a>
-                <a href="about.html">About</a>
-            </nav>
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                C<span>D</span>
+            </div>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+            <p>
+                Loading my work...
+            </p>
 
         </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CURSOR GLOW
+    ====================================================== -->
+
+    
+
+
+    <!-- =====================================================
+         SKIP LINK
+    ====================================================== -->
+
+    <a
+        href="#main-content"
+        class="skip-link"
+    >
+        Skip to main content
+    </a>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header
+        class="navbar"
+        id="navbar"
+    >
+
+        <div class="nav-container">
+
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <nav
+                class="desktop-nav"
+                aria-label="Main Navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="work.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Work
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+
+                <!-- THEME BUTTON -->
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <i
+                        class="fa-solid fa-moon"
+                        id="themeIcon"
+                    ></i>
+
+                </button>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+        >
+
+            <a href="index.html">
+
+                <span>
+                    01
+                </span>
+
+                Home
+
+            </a>
+
+
+            <a href="work.html">
+
+                <span>
+                    02
+                </span>
+
+                Work
+
+            </a>
+
+
+            <a href="about.html">
+
+                <span>
+                    03
+                </span>
+
+                About
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <span>
+                    04
+                </span>
+
+                Contact
+
+            </a>
+
+        </div>
+
     </header>
 
-    <!-- MAIN CONTENT -->
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
     <main id="main-content">
 
-        <!-- WORK SECTION -->
-        <section class="page-section work-section">
 
-            <!-- PAGE HEADER -->
-            <div class="page-header">
-                <h1>
+        <!-- =================================================
+             WORK HERO
+        ================================================== -->
+
+        <section class="about-hero">
+
+            <div class="section-container">
+
+
+                <div class="about-hero-label reveal">
+
+                    <span>
+                        Selected Work
+                    </span>
+
+                    <span>
+                        / 2026
+                    </span>
+
+                </div>
+
+
+                <h1 class="about-hero-title reveal">
+
                     Things I've
                     <span>created.</span>
+
                 </h1>
-                <p>
-                    A collection of projects I have created while
-                    learning web development, programming, design,
-                    and technology.
+
+
+                <p class="about-hero-description reveal">
+
+                    A collection of my school projects,
+                    experiments, web applications, and
+                    creative works created throughout
+                    my college journey.
+
                 </p>
-            </div>
 
-            <!-- WHAT I CAN OFFER -->
-            <section class="services-section">
-
-                <!-- SERVICES HEADER -->
-                <div class="services-header">
-                    <p class="services-label">WHAT I CAN OFFER</p>
-                    <h2>
-                        Simple ideas,
-                        <span>useful solutions.</span>
-                    </h2>
-                    <p>
-                        I enjoy creating clean, simple, and
-                        user-friendly digital experiences while
-                        continuously improving my skills in web
-                        development and design.
-                    </p>
-                </div>
-
-                <!-- SERVICES GRID -->
-                <div class="services-grid">
-
-                    <!-- SERVICE 1 -->
-                    <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">
-                            <i class="fa-solid fa-pen-ruler"></i>
-                        </div>
-                        <div>
-                            <h3>Web Design</h3>
-                            <p>
-                                Creating clean and responsive
-                                webpage designs focused on simple
-                                layouts, readability, and a pleasant
-                                user experience.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- SERVICE 2 -->
-                    <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <div>
-                            <h3>Front-End Development</h3>
-                            <p>
-                                Building responsive webpages using
-                                HTML, CSS, and JavaScript with
-                                attention to structure and
-                                functionality.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- SERVICE 3 -->
-                    <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">
-                            <i class="fa-solid fa-object-group"></i>
-                        </div>
-                        <div>
-                            <h3>UI Design</h3>
-                            <p>
-                                Designing simple and organized
-                                interfaces that make websites easy
-                                to understand and comfortable to use.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- SERVICE 4 -->
-                    <article class="service-card">
-                        <div class="service-icon" aria-hidden="true">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </div>
-                        <div>
-                            <h3>Basic Web Applications</h3>
-                            <p>
-                                Developing small interactive web
-                                projects such as games, API-based
-                                applications, and other browser-based
-                                solutions.
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
-
-            </section>
-
-            <!-- PROJECTS -->
-            <div class="projects-heading">
-                <p class="services-label">MY PROJECTS</p>
-                <h2>
-                    Things I've
-                    <span>built.</span>
-                </h2>
-            </div>
-
-            <!-- PROJECT GRID -->
-            <div class="work-grid">
-
-                <!-- PROJECT 1 -->
-                <article class="work-card">
-                    <div class="work-icon" aria-hidden="true">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <div class="work-content">
-                        <p class="work-category">Web game</p>
-                        <h2>Chromatic Graph Game</h2>
-                        <p class="work-description">
-                            An interactive web-based game inspired
-                            by graph theory and graph coloring.
-                            It combines logical thinking, problem
-                            solving, and interactive gameplay.
-                        </p>
-                        <ul class="work-tags">
-                            <li>Dart</li>
-                            <li>Graph theory</li>
-                        </ul>
-                        <a href="https://cresadel.github.io/chromatic-graph-game/" target="_blank" rel="noopener noreferrer" class="work-button">
-                            View project
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            <span class="sr-only">(opens in a new tab)</span>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- PROJECT 2 -->
-                <article class="work-card">
-                    <div class="work-icon" aria-hidden="true">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div class="work-content">
-                        <p class="work-category">Personal website</p>
-                        <h2>About Me</h2>
-                        <p class="work-description">
-                            A simple personal webpage created to
-                            introduce myself, share information
-                            about my background, and present my
-                            personal profile online.
-                        </p>
-                        <ul class="work-tags">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Web design</li>
-                        </ul>
-                        <a href="https://cresadel.github.io/about_me/" target="_blank" rel="noopener noreferrer" class="work-button">
-                            View project
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            <span class="sr-only">(opens in a new tab)</span>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- PROJECT 3 -->
-                <article class="work-card">
-                    <div class="work-icon" aria-hidden="true">
-                        <i class="fa-solid fa-id-card"></i>
-                    </div>
-                    <div class="work-content">
-                        <p class="work-category">Web design</p>
-                        <h2>Developer Card</h2>
-                        <p class="work-description">
-                            A developer profile card designed to
-                            present personal information and
-                            developer-related details through a
-                            clean and modern interface.
-                        </p>
-                        <ul class="work-tags">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>UI design</li>
-                        </ul>
-                        <a href="https://cresadel.github.io/developer-card/" target="_blank" rel="noopener noreferrer" class="work-button">
-                            View project
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            <span class="sr-only">(opens in a new tab)</span>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- PROJECT 4 -->
-                <article class="work-card">
-                    <div class="work-icon" aria-hidden="true">
-                        <i class="fa-solid fa-database"></i>
-                    </div>
-                    <div class="work-content">
-                        <p class="work-category">Web application</p>
-                        <h2>Simple Products API</h2>
-                        <p class="work-description">
-                            A simple web project that demonstrates
-                            working with product data and API-based
-                            information in a web application.
-                        </p>
-                        <ul class="work-tags">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>API</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        <a href="https://cresadel.github.io/simple-products-api/" target="_blank" rel="noopener noreferrer" class="work-button">
-                            View project
-                            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            <span class="sr-only">(opens in a new tab)</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="work-card">
-    <div class="work-icon" aria-hidden="true">
-        <i class="fa-solid fa-code"></i>
-    </div>
-
-    <div class="work-content">
-        <p class="work-category">Web Game</p>
-
-        <h2>Regex Challenge Game</h2>
-
-        <p class="work-description">
-            An interactive Regex Challenge Game that tests users’ knowledge 
-            of regular expressions through timed challenges, 
-            instant feedback, scoring, and explanations.
-        </p>
-
-        <ul class="work-tags">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-
-        <a href="https://cresadel.github.io/regex-challenge-game/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="work-button">
-            View project
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-            <span class="sr-only">(opens in a new tab)</span>
-        </a>
-    </div>
-</article>
             </div>
 
         </section>
 
+
+
+        <!-- =================================================
+             PROJECT COLLECTION
+        ================================================== -->
+
+        <section
+            class="memories-section"
+            id="projects"
+        >
+
+            <div class="section-container">
+
+
+                <!-- SECTION HEADER -->
+
+                <div class="memories-heading reveal">
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                01
+                            </span>
+
+                            <span>
+                                Project Collection
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            A few things
+                            <span>I've built.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Each project reflects a different
+                        part of my learning journey â€” from
+                        programming and web development to
+                        experimenting with new ideas.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- PROJECT GRID -->
+
+                <div class="projects-grid">
+
+
+                    <!-- =====================================
+                         PROJECT 01 â€” LIVE ON GITHUB PAGES
+                    ====================================== -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="programming"
+                    >
+
+                        <div class="project-image">
+
+                            <img
+                                src="images/works/regex-game.png"
+                                alt="Regex Challenge Game"
+                                onerror="this.classList.add('image-error')"
+                            >
+
+
+                            <div class="project-overlay">
+
+                                <a
+                                    href="https://cresadel.github.io/regex-challenge-game/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Open Regex Challenge Game live demo"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square"
+                                    ></i>
+
+                                </a>
+
+                            </div>
+
+
+                            <span class="project-number">
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-top">
+
+                                <span>
+                                    Programming
+                                </span>
+
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                ></i>
+
+                            </div>
+
+
+                            <h3>
+                                Regex Challenge Game
+                            </h3>
+
+
+                            <p>
+
+                                An interactive learning game
+                                focused on Regular Expressions,
+                                designed to make practicing
+                                regex patterns more engaging.
+
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    Regex
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://cresadel.github.io/regex-challenge-game/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link-btn"
+                                >
+                                    <i class="fa-solid fa-play"></i>
+                                    Live Demo
+                                </a>
+
+                                <a
+                                    href="https://github.com/Cresadel/regex-challenge-game"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link-btn secondary"
+                                >
+                                    <i class="fa-brands fa-github"></i>
+                                    Code
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =====================================
+                         PROJECT 02 â€” LIVE ON GITHUB PAGES
+                    ====================================== -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="programming"
+                    >
+
+                        <div class="project-image">
+
+                            <img
+                                src="images/works/chromatic game.png"
+                                alt="Chromatic Graph Game"
+                                onerror="this.classList.add('image-error')"
+                            >
+
+
+                            <div class="project-overlay">
+
+                                <a
+                                    href="https://cresadel.github.io/chromatic-graph-game/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Open Chromatic Graph Game live demo"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square"
+                                    ></i>
+
+                                </a>
+
+                            </div>
+
+
+                            <span class="project-number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-top">
+
+                                <span>
+                                    Programming
+                                </span>
+
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                ></i>
+
+                            </div>
+
+
+                            <h3>
+                                Chromatic Graph Game
+                            </h3>
+
+
+                            <p>
+
+                                An interactive game built around
+                                graph coloring concepts, where
+                                players color connected nodes
+                                while learning Graph Theory
+                                principles.
+
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    Graph Theory
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://cresadel.github.io/chromatic-graph-game/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link-btn"
+                                >
+                                    <i class="fa-solid fa-play"></i>
+                                    Live Demo
+                                </a>
+
+                                <a
+                                    href="https://github.com/Cresadel/chromatic-graph-game"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link-btn secondary"
+                                >
+                                    <i class="fa-brands fa-github"></i>
+                                    Code
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =====================================
+                         PROJECT 03 â€” CFG GAME
+                    ====================================== -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="programming"
+                    >
+
+                        <div class="project-image">
+
+                            <img
+                                src="images/works/cfg-game.png"
+                                alt="CFG GAME"
+                                onerror="this.classList.add('image-error')"
+                            >
+
+
+                            <div class="project-overlay">
+
+                                <a
+                                    href="https://cresadel.github.io/CFG_GAME/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Open CFG GAME live demo"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square"
+                                    ></i>
+
+                                </a>
+
+                            </div>
+
+
+                            <span class="project-number">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-top">
+
+                                <span>
+                                    Programming
+                                </span>
+
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                ></i>
+
+                            </div>
+
+
+                            <h3>
+                                CFG GAME
+                            </h3>
+
+
+                            <p>
+
+                                An interactive web-based game built
+                                around programming logic,
+                                problem-solving, and engaging
+                                gameplay.
+
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    Web Game
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://cresadel.github.io/CFG_GAME/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link-btn"
+                                >
+                                    <i class="fa-solid fa-play"></i>
+                                    Live Demo
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+
+
+                    </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SKILLS / WHAT I USE
+        ================================================== -->
+
+        <section class="values-section">
+
+            <div class="section-container">
+
+
+                <div class="values-grid">
+
+
+                    <!-- LEFT -->
+
+                    <div class="values-title reveal">
+
+                        <div class="section-label">
+
+                            <span>
+                                02
+                            </span>
+
+                            <span>
+                                What I Use
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            Tools that help
+                            me <span>create.</span>
+
+                        </h2>
+
+                    </div>
+
+
+
+                    <!-- RIGHT -->
+
+                    <div class="values-list">
+
+
+                        <div class="value-item reveal">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Front-End
+                                </h3>
+
+                                <p>
+
+                                    HTML, CSS, JavaScript,
+                                    responsive layouts,
+                                    animations, and modern
+                                    web interfaces.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="value-item reveal">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Programming
+                                </h3>
+
+                                <p>
+
+                                    Dart and basic programming
+                                    concepts developed through
+                                    academic projects and
+                                    experimentation.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="value-item reveal">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Mobile Development
+                                </h3>
+
+                                <p>
+
+                                    Flutter-based interfaces and
+                                    application concepts with
+                                    Firebase integration.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="value-item reveal">
+
+                            <span>
+                                04
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Creative Design
+                                </h3>
+
+                                <p>
+
+                                    Layout, typography, visual
+                                    hierarchy, presentation,
+                                    and user interface design.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="final-cta">
+
+            <div class="section-container">
+
+
+                <span class="cta-small">
+
+                    Have an idea?
+
+                </span>
+
+
+                <h2>
+
+                    Let's create
+                    something <span>meaningful.</span>
+
+                </h2>
+
+
+                <a
+                    href="contact.html"
+                    class="btn btn-primary"
+                >
+
+                    Let's Connect
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                    ></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
     </main>
 
-    <!-- FOOTER -->
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
-        <p>© 2026 Cresadel Dela Cruz. All rights reserved.</p>
+
+        <div class="footer-container">
+
+            <div class="footer-inner">
+
+                <span class="footer-logo">
+                    C<span>D</span>
+                </span>
+
+                <p class="footer-tagline">
+                    From ideas to something real.
+                </p>
+
+                <nav class="footer-links" aria-label="Footer">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="work.html">
+                        Work
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a
+                        href="https://github.com/Cresadel"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Cresadel M. Dela Cruz.
+                </span>
+
+                <span>
+                    Built with curiosity & creativity.
+                </span>
+
+            </div>
+
+        </div>
+
     </footer>
+
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top"
+    >
+
+        <i
+            class="fa-solid fa-arrow-up"
+        ></i>
+
+    </button>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+
 
 </body>
 

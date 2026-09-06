@@ -4,243 +4,2720 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Cresadel Dela Cruz, a college student interested in technology, creativity, and learning.">
-    <meta name="author" content="Cresadel M. Dela Cruz">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="About Cresadel M. Dela Cruz — personal story, place, college journey, education, skills, and goals."
+    >
+
+    <meta
+        name="author"
+        content="Cresadel M. Dela Cruz"
+    >
 
     <title>About | Cresadel Dela Cruz</title>
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="navbar">
-        <div class="nav-container">
 
-            <!-- LOGO -->
-            <a href="index.html" class="logo" aria-label="Cresadel Dela Cruz Home">
-                <img src="images/logo.png" alt="Cresadel Dela Cruz Logo">
-            </a>
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
 
-            <nav aria-label="Main Navigation">
-                <a href="index.html">Home</a>
-                <a href="work.html">Work</a>
-                <a href="about.html" class="active" aria-current="page">About</a>
-            </nav>
+    <div
+        class="loader"
+        id="loader"
+        aria-hidden="true"
+    >
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                C<span>D</span>
+            </div>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+            <p>
+                Getting to know me...
+            </p>
 
         </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CURSOR GLOW
+    ====================================================== -->
+
+    
+
+
+
+    <!-- =====================================================
+         SKIP LINK
+    ====================================================== -->
+
+    <a
+        href="#main-content"
+        class="skip-link"
+    >
+        Skip to main content
+    </a>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header
+        class="navbar"
+        id="navbar"
+    >
+
+        <div class="nav-container">
+
+
+
+            <!-- DESKTOP NAV -->
+
+            <nav
+                class="desktop-nav"
+                aria-label="Main Navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="work.html">
+                    Work
+                </a>
+
+                <a
+                    href="about.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+
+                <!-- THEME -->
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <i
+                        class="fa-solid fa-moon"
+                        id="themeIcon"
+                    ></i>
+
+                </button>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MOBILE MENU -->
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+        >
+
+            <a href="index.html">
+
+                <span>
+                    01
+                </span>
+
+                Home
+
+            </a>
+
+
+            <a href="work.html">
+
+                <span>
+                    02
+                </span>
+
+                Work
+
+            </a>
+
+
+            <a href="about.html">
+
+                <span>
+                    03
+                </span>
+
+                About
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <span>
+                    04
+                </span>
+
+                Contact
+
+            </a>
+
+        </div>
+
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
 
-        <!-- ABOUT SECTION -->
-        <section class="page-section" id="about">
 
-            <div class="page-header">
-                <h1>
-                    A little
-                    <span>about me.</span>
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main id="main-content">
+
+
+
+        <!-- =================================================
+             ABOUT HERO
+        ================================================== -->
+
+        <section class="about-hero">
+
+            <div class="section-container">
+
+
+                <div class="about-hero-label reveal">
+
+                    <span>
+                        About Me
+                    </span>
+
+                    <span>
+                        / My Story
+                    </span>
+
+                </div>
+
+
+
+                <h1 class="about-hero-title reveal">
+
+                    More than
+                    <span>just a portfolio.</span>
+
                 </h1>
-                <p>
-                    Get to know more about who I am,
-                    what I enjoy, and what I am working toward.
+
+
+
+                <p class="about-hero-description reveal">
+
+                    A little corner of the internet where I
+                    share where I come from, how I got here,
+                    the people and moments I've met along
+                    the way, and the person I'm becoming.
+
                 </p>
-            </div>
 
-            <div class="about-grid">
-
-                <!-- ABOUT TEXT -->
-                <div class="about-text">
-                    <h2>Hello, I'm Cresa!</h2>
-                    <p>
-                        My name is Cresadel M. Dela Cruz, 20 years old.
-                        I am a college student who enjoys learning
-                        new things, developing my skills, and
-                        exploring creative ideas.
-                    </p>
-                    <p>
-                        I enjoy working on different school projects
-                        and discovering how technology can be used
-                        to solve problems and create useful things.
-                    </p>
-                    <p>
-                        My academic journey has taught me the
-                        importance of patience, teamwork,
-                        creativity, and continuous improvement.
-                    </p>
-                    <p>
-                        My goal is to continue learning, gain
-                        meaningful experiences, and create projects
-                        that can make a positive impact.
-                    </p>
-                </div>
-
-                <!-- INFORMATION CARDS -->
-                <div class="about-cards">
-
-                    <!-- EDUCATION -->
-                    <div class="info-card">
-                        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                        <h3>Education</h3>
-                        <p>College Student</p>
-                    </div>
-
-                    <!-- INTERESTS -->
-                    <div class="info-card">
-                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
-                        <h3>Interests</h3>
-                        <p>Design, Technology & Creativity</p>
-                    </div>
-
-                    <!-- SKILLS -->
-                    <div class="info-card">
-                        <i class="fa-solid fa-code" aria-hidden="true"></i>
-                        <h3>Skills</h3>
-                        <p>HTML, CSS & Basic Programming</p>
-                    </div>
-
-                    <!-- GOAL -->
-                    <div class="info-card">
-                        <i class="fa-solid fa-rocket" aria-hidden="true"></i>
-                        <h3>Goal</h3>
-                        <p>Learn, Grow & Create</p>
-                    </div>
-
-                </div>
 
             </div>
 
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section class="page-section contact-section" id="contact">
 
-            <div class="page-header">
-                <h1>
-                    Let's
-                    <span>connect.</span>
-                </h1>
-                <p>
-                    Feel free to reach out to me through
-                    any of my contact and social media accounts.
-                </p>
-            </div>
 
-            <div class="contact-grid">
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
 
-                <!-- CONTACT INFORMATION -->
-                <div class="contact-info">
+        <section class="about-intro">
 
-                    <h2>Get in touch</h2>
+            <div class="section-container">
 
-                    <p>
-                        If you would like to connect with me,
-                        feel free to contact me through any
-                        of the platforms below.
-                    </p>
 
-                    <!-- EMAIL -->
-                    <a href="mailto:cresadeldelacruz16@gmail.com" class="contact-link">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <div class="about-intro-grid">
+
+
+                    <!-- LEFT -->
+
+                    <div class="about-intro-photo reveal">
+
+                        <div class="intro-photo-frame">
+
+                            <img
+                                src="images/profile.jpg"
+                                alt="Portrait of Cresadel Dela Cruz"
+                            >
+
                         </div>
-                        <div>
-                            <small>Email</small>
-                            <strong>cresadeldelacruz16@gmail.com</strong>
-                        </div>
-                    </a>
 
-                    <!-- PHONE -->
-                    <a href="tel:09754626486" class="contact-link">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <small>Phone</small>
-                            <strong>0975 462 6486</strong>
-                        </div>
-                    </a>
 
-                    <!-- FACEBOOK -->
-                    <a href="https://www.facebook.com/cresadel.delacruz.7" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <div class="contact-icon">
-                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <small>Facebook</small>
-                            <strong>Cresadel Dela Cruz</strong>
-                        </div>
-                    </a>
+                        <div class="intro-photo-label">
 
-                    <!-- INSTAGRAM -->
-                    <a href="https://www.instagram.com/crey_saa" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <div class="contact-icon">
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            <span>
+                                C.D
+                            </span>
+
+                            <span>
+                                2026
+                            </span>
+
                         </div>
-                        <div>
-                            <small>Instagram</small>
-                            <strong>@crey_saa</strong>
+
+                    </div>
+
+
+
+                    <!-- RIGHT -->
+
+                    <div class="about-intro-content reveal">
+
+
+                        <div class="section-label">
+
+                            <span>
+                                01
+                            </span>
+
+                            <span>
+                                A Little About Me
+                            </span>
+
                         </div>
-                    </a>
 
-                    <!-- GITHUB -->
-                    <a href="https://github.com/Cresadel" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <div class="contact-icon">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <small>GitHub</small>
-                            <strong>GitHub Profile</strong>
-                        </div>
-                    </a>
 
-                </div>
 
-                <!-- CONTACT MESSAGE -->
-                <div class="contact-message">
-                    <div class="message-box">
+                        <h2>
 
-                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            Hi, I'm
+                            <span>Cresa.</span>
 
-                        <h2>Let's work together.</h2>
+                        </h2>
+
+
 
                         <p>
-                            I am always open to learning,
-                            collaborating, and connecting
-                            with new people.
+
+                            My name is Cresadel M. Dela Cruz,
+                            and I'm a college student currently
+                            navigating my third year.
+
                         </p>
 
-                        <a href="mailto:cresadeldelacruz16@gmail.com" class="primary-btn">
-                            Send me an Email
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </a>
+
+
+                        <p>
+
+                            I'm someone who enjoys learning,
+                            creating, exploring ideas, and
+                            discovering new things along the
+                            way. I don't always have everything
+                            figured out, but every experience
+                            teaches me something new.
+
+                        </p>
+
+
+
+                        <p>
+
+                            This portfolio isn't only about the
+                            things I've built. It's also about
+                            the journey behind them — the places
+                            I've been, the people I've met, the
+                            memories I've made, and the small
+                            moments that helped shape me.
+
+                        </p>
+
+
+
+                        <div class="about-facts">
+
+
+                            <div class="about-fact">
+
+                                <i
+                                    class="fa-solid fa-cake-candles"
+                                ></i>
+
+                                <div>
+
+                                    <small>
+                                        Age
+                                    </small>
+
+                                    <strong>
+                                        20 years old
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="about-fact">
+
+                                <i
+                                    class="fa-solid fa-graduation-cap"
+                                ></i>
+
+                                <div>
+
+                                    <small>
+                                        Current Stage
+                                    </small>
+
+                                    <strong>
+                                        3rd Year College
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="about-fact">
+
+                                <i
+                                    class="fa-solid fa-heart"
+                                ></i>
+
+                                <div>
+
+                                    <small>
+                                        I Enjoy
+                                    </small>
+
+                                    <strong>
+                                        Music, Sunsets & Memories
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="about-fact">
+
+                                <i
+                                    class="fa-solid fa-lightbulb"
+                                ></i>
+
+                                <div>
+
+                                    <small>
+                                        Mindset
+                                    </small>
+
+                                    <strong>
+                                        Learn & Keep Growing
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
 
                     </div>
+
                 </div>
 
             </div>
 
         </section>
+
+
+
+        <!-- =================================================
+             PLACE / HOME
+        ================================================== -->
+
+        <section
+            class="place-section"
+            id="place"
+        >
+
+            <div class="section-container">
+
+
+                <!-- HEADER -->
+
+                <div class="place-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                02
+                            </span>
+
+                            <span>
+                                Where I Come From
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            A little piece of
+                            <span>home.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        The place I grew up in is more than
+                        just a location. It's part of the
+                        memories, experiences, and stories
+                        that made me who I am today.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- PLACE CONTENT -->
+
+                <div class="place-layout reveal">
+
+
+                    <!-- SLIDESHOW -->
+
+                    <div class="place-slider">
+
+
+                        <div class="place-slide active">
+
+                            <img
+                                src="images/place/place-1.jpg"
+                                alt="Photo of my hometown"
+                            >
+
+                        </div>
+
+
+                        <div class="place-slide">
+
+                            <img
+                                src="images/place/place-2.jpg"
+                                alt="Beautiful scenery from my hometown"
+                            >
+
+                        </div>
+
+
+                        <div class="place-slide">
+
+                            <img
+                                src="images/place/place-3.jpg"
+                                alt="Another view of my hometown"
+                            >
+
+                        </div>
+
+
+                        <div class="place-slide">
+
+                            <img
+                                src="images/place/place-4.jpg"
+                                alt="Scenery from my home"
+                            >
+
+                        </div>
+
+
+                        <div class="place-slide">
+
+                            <img
+                                src="images/place/place-5.jpg"
+                                alt="Memories from my hometown"
+                            >
+
+                        </div>
+
+
+
+                        <!-- OVERLAY -->
+
+                        <div class="place-overlay"></div>
+
+
+
+                        <!-- SLIDER TEXT -->
+
+                        <div class="place-slider-text">
+
+                            <span>
+                                HOME
+                            </span>
+
+                            <h3>
+                                Solaton Island
+                            </h3>
+
+                            <p>
+                                Tangub City, Misamis Occidental
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- SLIDER CONTROLS -->
+
+                        <button
+                            class="slider-btn slider-prev"
+                            id="placePrev"
+                            type="button"
+                            aria-label="Previous place photo"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-left"
+                            ></i>
+
+                        </button>
+
+
+                        <button
+                            class="slider-btn slider-next"
+                            id="placeNext"
+                            type="button"
+                            aria-label="Next place photo"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                            ></i>
+
+                        </button>
+
+
+
+                        <!-- DOTS -->
+
+                        <div
+                            class="slider-dots"
+                            id="placeDots"
+                        >
+
+                            <button
+                                class="slider-dot active"
+                                type="button"
+                                aria-label="Go to place photo 1"
+                            ></button>
+
+                            <button
+                                class="slider-dot"
+                                type="button"
+                                aria-label="Go to place photo 2"
+                            ></button>
+
+                            <button
+                                class="slider-dot"
+                                type="button"
+                                aria-label="Go to place photo 3"
+                            ></button>
+
+                            <button
+                                class="slider-dot"
+                                type="button"
+                                aria-label="Go to place photo 4"
+                            ></button>
+
+                            <button
+                                class="slider-dot"
+                                type="button"
+                                aria-label="Go to place photo 5"
+                            ></button>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PLACE STORY -->
+
+                    <div class="place-story">
+
+
+                        <span class="story-number">
+                            01
+                        </span>
+
+
+                        <h3>
+                            Where everything started.
+                        </h3>
+
+
+                        <p>
+
+                            I was born and raised on Solaton
+                            Island in Tangub. Growing up in a
+                            place surrounded by nature gave me
+                            a lot of simple but meaningful
+                            memories.
+
+                        </p>
+
+
+                        <p>
+
+                            Home reminds me that growth doesn't
+                            always have to be complicated.
+                            Sometimes, it begins with the
+                            smallest experiences and the
+                            people around us.
+
+                        </p>
+
+
+
+                        <div class="place-details">
+
+
+                            <div>
+
+                                <i
+                                    class="fa-solid fa-location-dot"
+                                ></i>
+
+                                <span>
+                                    Solaton Island
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i
+                                    class="fa-solid fa-map"
+                                ></i>
+
+                                <span>
+                                    Tangub City, Misamis Occidental
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i
+                                    class="fa-solid fa-leaf"
+                                ></i>
+
+                                <span>
+                                    Northern Mindanao
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COLLEGE JOURNEY
+        ================================================== -->
+
+        <section
+            class="journey-section"
+            id="journey"
+        >
+
+            <div class="section-container">
+
+
+                <!-- HEADER -->
+
+                <div class="journey-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                03
+                            </span>
+
+                            <span>
+                                My Journey
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            I didn't have
+                            <span>everything figured out.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        My college journey has been a process
+                        of figuring things out, learning from
+                        mistakes, trying new things, and slowly
+                        discovering where I want to go.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- JOURNEY INTRO -->
+
+                <div class="journey-intro reveal">
+
+
+                    <div class="journey-intro-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            It started without a clear plan.
+                        </h3>
+
+
+                        <p>
+
+                            Computer Science wasn't originally
+                            the path I had in mind. I came from
+                            a different background and entered
+                            college without having everything
+                            completely figured out.
+
+                        </p>
+
+
+                        <p>
+
+                            But sometimes, the unexpected path
+                            becomes the one that teaches us the
+                            most. Little by little, I started
+                            learning, experimenting, struggling,
+                            improving, and discovering what I
+                            could actually do.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JOURNEY TIMELINE -->
+
+                <div class="journey-timeline">
+
+
+                    <!-- YEAR 01 -->
+
+                    <article
+                        class="journey-item reveal"
+                    >
+
+                        <div class="journey-marker">
+
+                            <span>
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey-content">
+
+
+                            <span class="journey-tag">
+                                The Beginning
+                            </span>
+
+
+                            <h3>
+                                First Year
+                            </h3>
+
+
+                            <p>
+
+                                The beginning was filled with
+                                adjustments, unfamiliar subjects,
+                                new classmates, and a lot of
+                                questions.
+
+                            </p>
+
+
+                            <p>
+
+                                I was still trying to understand
+                                what college was going to be like
+                                and whether I could actually keep
+                                up.
+
+                            </p>
+
+
+                        </div>
+
+
+                        <div class="journey-photo">
+
+                            <img
+                                src="images/journey/year1.jpg"
+                                alt="First year college memory"
+                            >
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- YEAR 02 -->
+
+                    <article
+                        class="journey-item reverse reveal"
+                    >
+
+                        <div class="journey-marker">
+
+                            <span>
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey-content">
+
+
+                            <span class="journey-tag">
+                                Learning
+                            </span>
+
+
+                            <h3>
+                                Second Year
+                            </h3>
+
+
+                            <p>
+
+                                By second year, things started
+                                becoming more familiar. The
+                                projects became more challenging,
+                                but I also became more comfortable
+                                trying things on my own.
+
+                            </p>
+
+
+                            <p>
+
+                                This was when I started getting
+                                more involved in programming,
+                                application development, and
+                                different technical projects.
+
+                            </p>
+
+
+                        </div>
+
+
+                        <div class="journey-photo">
+
+                            <img
+                                src="images/journey/year2.jpg"
+                                alt="Second year college memory"
+                            >
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- YEAR 03 -->
+
+                    <article
+                        class="journey-item current reveal"
+                    >
+
+                        <div class="journey-marker">
+
+                            <span>
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey-content">
+
+
+                            <span class="journey-tag">
+                                Current Chapter
+                            </span>
+
+
+                            <h3>
+                                Third Year
+                            </h3>
+
+
+                            <p>
+
+                                And now, I'm here — already in
+                                my third year.
+
+                            </p>
+
+
+                            <p>
+
+                                There are still things I don't
+                                know, projects that challenge me,
+                                and moments when I question
+                                myself. But compared to where I
+                                started, I've learned how much
+                                progress can happen when you
+                                simply keep going.
+
+                            </p>
+
+
+                            <p>
+
+                                I'm still learning, still
+                                experimenting, and still figuring
+                                out what comes next.
+
+                            </p>
+
+
+                            <div class="current-badge">
+
+                                <span></span>
+
+                                Currently here
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="journey-photo">
+
+
+                            <img
+                                src="images/journey/year3.jpg"
+                                alt="Third year college memory"
+                            >
+
+
+                            <div class="photo-caption">
+
+                                2026 · 3rd Year
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             JOURNEY SLIDESHOW
+        ================================================== -->
+
+        <section class="journey-gallery">
+
+            <div class="section-container">
+
+
+                <div class="gallery-heading reveal">
+
+                    <div class="section-label">
+
+                        <span>
+                            04
+                        </span>
+
+                        <span>
+                            Along The Way
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+
+                        Little moments from
+                        <span>the journey.</span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="journey-slider reveal">
+
+
+                    <div
+                        class="journey-slide active"
+                    >
+
+                        <img
+                            src="images/journey/gallery-1.jpg"
+                            alt="College journey memory"
+                        >
+
+                    </div>
+
+
+                    <div class="journey-slide">
+
+                        <img
+                            src="images/journey/gallery-2.jpg"
+                            alt="College activity"
+                        >
+
+                    </div>
+
+
+                    <div class="journey-slide">
+
+                        <img
+                            src="images/journey/gallery-3.jpg"
+                            alt="College memory"
+                        >
+
+                    </div>
+
+
+                    <div class="journey-slide">
+
+                        <img
+                            src="images/journey/gallery-4.jpg"
+                            alt="College activity memory"
+                        >
+
+                    </div>
+
+
+                    <div class="journey-slide">
+
+                        <img
+                            src="images/journey/gallery-5.jpg"
+                            alt="College friends memory"
+                        >
+
+                    </div>
+
+
+                    <div class="journey-slider-info">
+
+                        <span>
+                            COLLEGE DIARY
+                        </span>
+
+                        <strong id="journeySlideNumber">
+                            01 / 05
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="slider-btn journey-prev"
+                        id="journeyPrev"
+                        type="button"
+                        aria-label="Previous college photo"
+                    >
+
+                        <i
+                            class="fa-solid fa-arrow-left"
+                        ></i>
+
+                    </button>
+
+
+                    <button
+                        class="slider-btn journey-next"
+                        id="journeyNext"
+                        type="button"
+                        aria-label="Next college photo"
+                    >
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MEMORIES / DUMP ALBUM
+        ================================================== -->
+
+        <section
+            class="memories-section"
+            id="memories"
+        >
+
+            <div class="section-container">
+
+
+                <!-- HEADER -->
+
+                <div class="memories-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                05
+                            </span>
+
+                            <span>
+                                Memory Dump
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            People,
+                            <span>places & little moments.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Not everything needs to become a
+                        project. Some moments are simply worth
+                        remembering.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- MEMORY GRID -->
+
+                <div class="memory-grid">
+
+
+                    <!-- BIG -->
+
+                    <div
+                        class="memory-card memory-large reveal"
+                    >
+
+                        <img
+                            src="images/memories/memory-1.jpg"
+                            alt="Memory with friends"
+                        >
+
+
+                        <div class="memory-overlay">
+
+                            <span>
+                                FRIENDS
+                            </span>
+
+                            <h3>
+                                The people who make
+                                the journey better.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SMALL -->
+
+                    <div
+                        class="memory-card reveal"
+                    >
+
+                        <img
+                            src="images/memories/memory-2.jpg"
+                            alt="College activity"
+                        >
+
+
+                        <div class="memory-overlay">
+
+                            <span>
+                                ACTIVITIES
+                            </span>
+
+                            <h3>
+                                1st Runner-Up — JPEG.COM, ARSO Festival 2024–2025.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="memory-card reveal"
+                    >
+
+                        <img
+                            src="images/memories/memory-3.jpg"
+                            alt="College friends"
+                        >
+
+
+                        <div class="memory-overlay">
+
+                            <span>
+                                FRIENDS
+                            </span>
+
+                            <h3>
+                                RAATI moments.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="memory-card reveal"
+                    >
+
+                        <img
+                            src="images/memories/memory-4.jpg"
+                            alt="School activity"
+                        >
+
+
+                        <div class="memory-overlay">
+
+                            <span>
+                                CAMPUS
+                            </span>
+
+                            <h3>
+                                SINULOG FESTIVAL 
+                                JAN 26, 2025.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="memory-card memory-wide reveal"
+                    >
+
+                        <img
+                            src="images/memories/memory-5.jpg"
+                            alt="College memory"
+                        >
+
+
+                        <div class="memory-overlay">
+
+                            <span>
+                                MOMENTS
+                            </span>
+
+                            <h3>
+                                A collection of
+                                little memories.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="memory-card reveal"
+                    >
+
+                        <img
+                            src="images/memories/memory-6.jpg"
+                            alt="Personal memory"
+                        >
+
+
+                        <div class="memory-overlay">
+
+                            <span>
+                                LIFE
+                            </span>
+
+                            <h3>
+                                Beyond the classroom.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="memory-card reveal"
+                    >
+
+                        <img
+                            src="images/memories/memory-7.jpg"
+                            alt="Friends memory"
+                        >
+
+
+                        <div class="memory-overlay">
+
+                            <span>
+                                DUMP
+                            </span>
+
+                            <h3>
+                                Just because.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EDUCATION
+        ================================================== -->
+
+        <section class="education-section">
+
+            <div class="section-container">
+
+
+                <div class="education-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                06
+                            </span>
+
+                            <span>
+                                Education
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            Learning one
+                            <span>step at a time.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        From where I started to where I am now,
+                        every year has added something new to
+                        how I think, build, and grow.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- EDUCATION LIST -->
+
+                <div class="education-list">
+
+
+                    <!-- CURRENT -->
+
+                    <article class="education-item reveal">
+
+                        <div class="education-period">
+                            College
+                        </div>
+
+
+                        <div class="education-body">
+
+                            <span class="education-tag">
+                                Current
+                            </span>
+
+
+                            <h3>
+                                Bachelor of Science in Computer Science
+                            </h3>
+
+
+                            <p class="education-school">
+                                Third Year &middot; Tangub City Global College (TCGC)
+                            </p>
+
+
+                            <p>
+
+                                Currently in my third year, learning
+                                programming, application development,
+                                and how to turn ideas into real things.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <section class="skills-section">
+
+            <div class="section-container">
+
+
+                <div class="skills-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                07
+                            </span>
+
+                            <span>
+                                Skills
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            What I enjoy
+                            <span>working with.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        A mix of technical and personal skills I've
+                        been building through school, projects, and
+                        everyday learning.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- SKILL ROWS -->
+
+                <div class="skills-list">
+
+
+                    <div class="skill-row reveal">
+
+                        <div class="skill-icon">
+
+                            <i
+                                class="fa-solid fa-code"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="skill-info">
+
+                            <h3>
+                                Programming &amp; Development
+                            </h3>
+
+
+                            <p>
+
+                                Building logic, solving problems, and
+                                creating applications project by project.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-chips">
+
+                            <span>
+                                Programming
+                            </span>
+
+                            <span>
+                                Application Development
+                            </span>
+
+                            <span>
+                                Technical Projects
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-row reveal">
+
+                        <div class="skill-icon">
+
+                            <i
+                                class="fa-solid fa-palette"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="skill-info">
+
+                            <h3>
+                                Design &amp; Creativity
+                            </h3>
+
+
+                            <p>
+
+                                Making things that look clean, feel
+                                personal, and are a pleasure to use.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-chips">
+
+                            <span>
+                                Web Design
+                            </span>
+
+                            <span>
+                                Layout &amp; Interface
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="skill-row reveal">
+
+                        <div class="skill-icon">
+
+                            <i
+                                class="fa-solid fa-people-group"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="skill-info">
+
+                            <h3>
+                                Working With People
+                            </h3>
+
+
+                            <p>
+
+                                Learning from classmates, sharing ideas,
+                                and growing through collaboration.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="skill-chips">
+
+                            <span>
+                                Collaboration
+                            </span>
+
+                            <span>
+                                Communication
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SEMINARS & LEARNING
+        ================================================== -->
+
+        <section class="seminars-section">
+
+            <div class="section-container">
+
+
+                <div class="seminars-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                08
+                            </span>
+
+                            <span>
+                                Seminars &amp; Learning
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            Always open
+                            <span>to learning.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Talks, seminars, and sessions that have
+                        added to what I know and how I think.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- SEMINAR CAROUSEL -->
+
+                <div class="seminar-carousel reveal">
+
+
+                    <input
+                        type="radio"
+                        name="seminar"
+                        id="seminar-radio-1"
+                        checked
+                    >
+
+                    <input
+                        type="radio"
+                        name="seminar"
+                        id="seminar-radio-2"
+                    >
+
+
+                    <div class="seminar-slides">
+
+
+                        <!-- SLIDE 1 -->
+
+                        <div class="seminar-slide">
+
+
+                            <div class="seminar-slide-image">
+
+                                <img
+                                    src="images/seminars/seminar-1.jpg"
+                                    alt="Seminar certificate — Ecommerce MVP + GSSo + Analytics with Django and Nuxt"
+                                >
+
+                            </div>
+
+
+                            <div class="seminar-slide-content">
+
+                                <div class="seminar-slide-meta">
+
+                                    <span class="seminar-slide-date">
+                                        August 24, 2026
+                                    </span>
+
+                                    <span class="seminar-slide-tag">
+                                        IT Seminar
+                                    </span>
+
+                                </div>
+
+
+                                <h3>
+                                    Ecommerce MVP + GSSo + Analytics with Django &amp; Nuxt
+                                </h3>
+
+
+                                <p class="seminar-slide-speaker">
+                                    Jo Renlee Luna
+                                </p>
+
+
+                                <div class="seminar-slide-learned">
+
+                                    <strong>
+                                        What I Learned
+                                    </strong>
+
+                                    <p>
+
+                                        I learned how e-commerce applications
+                                        can be developed using an MVP approach
+                                        and how Django, Nuxt, and analytics
+                                        can work together in building and
+                                        understanding an online platform.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SLIDE 2 -->
+
+                        <div class="seminar-slide">
+
+
+                            <div class="seminar-slide-image">
+
+                                <img
+                                    src="images/seminars/seminar-2.jpg"
+                                    alt="Seminar certificate — You Don't Need the Perfect Dev Path"
+                                >
+
+                            </div>
+
+
+                            <div class="seminar-slide-content">
+
+                                <div class="seminar-slide-meta">
+
+                                    <span class="seminar-slide-date">
+                                        August 28, 2026
+                                    </span>
+
+                                    <span class="seminar-slide-tag">
+                                        IT Seminar
+                                    </span>
+
+                                </div>
+
+
+                                <h3>
+                                    You Don't Need the Perfect Dev Path
+                                </h3>
+
+
+                                <p class="seminar-slide-speaker">
+                                    Joshua J. Vincente
+                                </p>
+
+
+                                <div class="seminar-slide-learned">
+
+                                    <strong>
+                                        What I Learned
+                                    </strong>
+
+                                    <p>
+
+                                        I learned that there is no single
+                                        perfect path in becoming a developer.
+                                        What matters is continuing to learn,
+                                        explore, and improve along the way.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="seminar-nav">
+
+                        <label
+                            for="seminar-radio-1"
+                            aria-label="Go to seminar 1"
+                        ></label>
+
+                        <label
+                            for="seminar-radio-2"
+                            aria-label="Go to seminar 2"
+                        ></label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GOALS
+        ================================================== -->
+
+        <section class="goals-section">
+
+            <div class="section-container">
+
+
+                <div class="goals-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <span>
+                                09
+                            </span>
+
+                            <span>
+                                Goals
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+
+                            Where I'm
+                            <span>headed next.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        A few directions I'm working toward, one
+                        small step at a time.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- GOAL LIST -->
+
+                <div class="goals-list">
+
+
+                    <div class="goal-item reveal">
+
+                        <span class="goal-number">
+                            01
+                        </span>
+
+
+                        <h3>
+                            Keep learning &amp; improving
+                        </h3>
+
+
+                        <p>
+
+                            Deepening my skills in programming and
+                            development so I can build more confidently.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="goal-item reveal">
+
+                        <span class="goal-number">
+                            02
+                        </span>
+
+
+                        <h3>
+                            Build real projects
+                        </h3>
+
+
+                        <p>
+
+                            Turning ideas into things that work, and
+                            finishing what I start.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="goal-item reveal">
+
+                        <span class="goal-number">
+                            03
+                        </span>
+
+
+                        <h3>
+                            Grow through every experience
+                        </h3>
+
+
+                        <p>
+
+                            Staying curious, meeting new people, and
+                            making the most of what comes my way.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="final-cta">
+
+            <div class="section-container">
+
+
+                <span class="cta-small">
+                    Still growing.
+                </span>
+
+
+                <h2>
+
+                    This is only
+                    <span>the beginning.</span>
+
+                </h2>
+
+
+                <a
+                    href="work.html"
+                    class="primary-btn"
+                >
+
+                    See My Work
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                    ></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
 
     </main>
 
-    <!-- FOOTER -->
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
-        <p>© 2026 Cresadel Dela Cruz. All rights reserved.</p>
+
+        <div class="footer-container">
+
+            <div class="footer-inner">
+
+                <span class="footer-logo">
+                    C<span>D</span>
+                </span>
+
+                <p class="footer-tagline">
+                    Learning. Creating. Growing.
+                </p>
+
+                <nav class="footer-links" aria-label="Footer">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="work.html">
+                        Work
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a
+                        href="https://github.com/Cresadel"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Cresadel M. Dela Cruz.
+                </span>
+
+                <span>
+                    Built with curiosity & creativity.
+                </span>
+
+            </div>
+
+        </div>
+
     </footer>
+
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top"
+    >
+
+        <i
+            class="fa-solid fa-arrow-up"
+        ></i>
+
+    </button>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+    <script>
+
+
+        /* =====================================================
+           PLACE SLIDESHOW
+        ====================================================== */
+
+        const placeSlides =
+            document.querySelectorAll(
+                ".place-slide"
+            );
+
+
+        const placeDots =
+            document.querySelectorAll(
+                ".slider-dot"
+            );
+
+
+        const placePrev =
+            document.getElementById(
+                "placePrev"
+            );
+
+
+        const placeNext =
+            document.getElementById(
+                "placeNext"
+            );
+
+
+        let placeIndex = 0;
+
+
+        function showPlaceSlide(
+            index
+        ) {
+
+            placeSlides.forEach(
+                function (slide) {
+
+                    slide.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            placeDots.forEach(
+                function (dot) {
+
+                    dot.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            placeSlides[index].classList.add(
+                "active"
+            );
+
+
+            placeDots[index].classList.add(
+                "active"
+            );
+
+        }
+
+
+        function nextPlaceSlide() {
+
+            placeIndex++;
+
+            if (
+                placeIndex >=
+                placeSlides.length
+            ) {
+
+                placeIndex = 0;
+
+            }
+
+
+            showPlaceSlide(
+                placeIndex
+            );
+
+        }
+
+
+        function previousPlaceSlide() {
+
+            placeIndex--;
+
+            if (
+                placeIndex < 0
+            ) {
+
+                placeIndex =
+                    placeSlides.length - 1;
+
+            }
+
+
+            showPlaceSlide(
+                placeIndex
+            );
+
+        }
+
+
+        placeNext.addEventListener(
+            "click",
+            nextPlaceSlide
+        );
+
+
+        placePrev.addEventListener(
+            "click",
+            previousPlaceSlide
+        );
+
+
+        placeDots.forEach(
+            function (
+                dot,
+                index
+            ) {
+
+                dot.addEventListener(
+                    "click",
+                    function () {
+
+                        placeIndex =
+                            index;
+
+
+                        showPlaceSlide(
+                            placeIndex
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* AUTO PLACE SLIDESHOW */
+
+        let placeAutoSlide =
+            setInterval(
+                nextPlaceSlide,
+                5000
+            );
+
+
+        const placeSlider =
+            document.querySelector(
+                ".place-slider"
+            );
+
+
+        placeSlider.addEventListener(
+            "mouseenter",
+            function () {
+
+                clearInterval(
+                    placeAutoSlide
+                );
+
+            }
+        );
+
+
+        placeSlider.addEventListener(
+            "mouseleave",
+            function () {
+
+                placeAutoSlide =
+                    setInterval(
+                        nextPlaceSlide,
+                        5000
+                    );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           COLLEGE JOURNEY SLIDESHOW
+        ====================================================== */
+
+        const journeySlides =
+            document.querySelectorAll(
+                ".journey-slide"
+            );
+
+
+        const journeyPrev =
+            document.getElementById(
+                "journeyPrev"
+            );
+
+
+        const journeyNext =
+            document.getElementById(
+                "journeyNext"
+            );
+
+
+        const journeyNumber =
+            document.getElementById(
+                "journeySlideNumber"
+            );
+
+
+        let journeyIndex = 0;
+
+
+        function showJourneySlide(
+            index
+        ) {
+
+            journeySlides.forEach(
+                function (slide) {
+
+                    slide.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            journeySlides[index].classList.add(
+                "active"
+            );
+
+
+            const current =
+                String(
+                    index + 1
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            const total =
+                String(
+                    journeySlides.length
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            journeyNumber.textContent =
+                current +
+                " / " +
+                total;
+
+        }
+
+
+        function nextJourneySlide() {
+
+            journeyIndex++;
+
+
+            if (
+                journeyIndex >=
+                journeySlides.length
+            ) {
+
+                journeyIndex = 0;
+
+            }
+
+
+            showJourneySlide(
+                journeyIndex
+            );
+
+        }
+
+
+        function previousJourneySlide() {
+
+            journeyIndex--;
+
+
+            if (
+                journeyIndex < 0
+            ) {
+
+                journeyIndex =
+                    journeySlides.length - 1;
+
+            }
+
+
+            showJourneySlide(
+                journeyIndex
+            );
+
+        }
+
+
+        journeyNext.addEventListener(
+            "click",
+            nextJourneySlide
+        );
+
+
+        journeyPrev.addEventListener(
+            "click",
+            previousJourneySlide
+        );
+
+
+
+        /* AUTO JOURNEY SLIDESHOW */
+
+        let journeyAutoSlide =
+            setInterval(
+                nextJourneySlide,
+                5500
+            );
+
+
+        const journeySlider =
+            document.querySelector(
+                ".journey-slider"
+            );
+
+
+        journeySlider.addEventListener(
+            "mouseenter",
+            function () {
+
+                clearInterval(
+                    journeyAutoSlide
+                );
+
+            }
+        );
+
+
+        journeySlider.addEventListener(
+            "mouseleave",
+            function () {
+
+                journeyAutoSlide =
+                    setInterval(
+                        nextJourneySlide,
+                        5500
+                    );
+
+            }
+        );
+
+
+    </script>
+
+
+
+
 
 </body>
 
