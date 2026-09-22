@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initLoader();
     initMobileMenu();
+    initDropdowns();
     initThemeToggle();
     initScrollReveal();
     initBackToTop();
@@ -191,6 +192,239 @@ function initMobileMenu() {
         }
 
     });
+
+}
+
+
+/* =========================================================
+   NAVBAR DROPDOWNS — PURE VANILLA JAVASCRIPT
+   ========================================================= */
+
+/*
+   initDropdown(buttonId, menuId)  wires up ONE dropdown.
+
+   It takes the id of the trigger <button> and the id of the
+   <ul> menu. Because the logic is the same for both dropdowns,
+   we can reuse the same function for the desktop dropdown and
+   the mobile dropdown.
+
+   Important: the menu is shown/hidden by toggling the "show"
+   class (which style.css maps to display: block). We never
+   touch el.style.display directly.
+*/
+
+function initDropdown(buttonId, menuId) {
+
+    // 1. Select the button and the menu with document.querySelector
+    //    (a CSS id selector like "#dropdownBtn").
+    const dropdownButton =
+        document.querySelector(`#${buttonId}`);
+
+    const dropdownMenu =
+        document.querySelector(`#${menuId}`);
+
+    // If either element is missing, do nothing. This keeps
+    // the other pages (work.html, about.html, ...) error-free,
+    // since they don't have these dropdowns.
+    if (!dropdownButton || !dropdownMenu) {
+        return;
+    }
+
+    // Grab the little ▼/▲ arrow that lives inside the button.
+    const arrow =
+        dropdownButton.querySelector(".dropdown-arrow");
+
+
+    // 2. Handle the click on the trigger button.
+    dropdownButton.addEventListener("click", () => {
+
+        // Toggle the "show" class on the menu:
+        //   first click  -> adds "show"    -> menu opens
+        //   second click -> removes "show" -> menu closes
+        const isOpen =
+            dropdownMenu.classList.toggle("show");
+
+        // If this dropdown just opened, close every other
+        // dropdown first so only one menu is open at a time.
+        if (isOpen) {
+            closeAllDropdowns(dropdownMenu);
+        }
+
+        // Keep aria-expanded in sync (for screen readers).
+        dropdownButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+        // Bonus: flip the arrow ▼ -> ▲ while open,
+        // and ▲ -> ▼ when closed again.
+        if (arrow) {
+            arrow.textContent =
+                isOpen
+                    ? "▲"
+                    : "▼";
+        }
+
+    });
+
+
+    // 3. Bonus: close the menu when clicking outside of it.
+    //    A click event on the whole document fires for every
+    //    click that bubbles up, so we verify where it landed.
+    document.addEventListener("click", event => {
+
+        // Nothing to do if the menu is already closed.
+        if (!dropdownMenu.classList.contains("show")) {
+            return;
+        }
+
+        // Did the click land INSIDE the menu, or on the button?
+        // Then we leave it alone.
+        const clickedInside =
+            dropdownMenu.contains(event.target) ||
+            dropdownButton.contains(event.target);
+
+        if (clickedInside) {
+            return;
+        }
+
+        // Otherwise, the click was outside -> close the menu.
+        // We close ALL dropdowns so a click outside closes
+        // everything at once (even if two were somehow open).
+        closeAllDropdowns();
+
+    });
+
+
+    // 4. Bonus: close the menu after clicking a link inside it.
+    dropdownMenu
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener("click", event => {
+
+                // Placeholder links (href="#" + "(coming soon)")
+                // don't go anywhere yet — stop them jumping the
+                // page back to the top, and just close the menu.
+                if (link.getAttribute("href") === "#") {
+                    event.preventDefault();
+                }
+
+                closeDropdown(
+                    dropdownButton,
+                    dropdownMenu,
+                    arrow
+                );
+
+            });
+
+        });
+
+
+    // 5. Bonus: close the menu with the Escape key.
+    document.addEventListener("keydown", event => {
+
+        if (
+            event.key === "Escape" &&
+            dropdownMenu.classList.contains("show")
+        ) {
+
+            closeDropdown(
+                dropdownButton,
+                dropdownMenu,
+                arrow
+            );
+
+        }
+
+    });
+
+}
+
+
+/*
+   closeDropdown() is a small helper used everywhere above.
+   It removes the "show" class, resets aria-expanded and
+   puts the arrow back to ▼.
+*/
+
+function closeDropdown(button, menu, arrow) {
+
+    menu.classList.remove("show");
+
+    button.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    if (arrow) {
+        arrow.textContent = "▼";
+    }
+
+}
+
+
+/*
+   closeAllDropdowns() closes every open dropdown.
+
+   It accepts an optional "exceptMenu" argument so that when
+   one dropdown opens we can keep that one open but close
+   all the others. It reads the trigger <button> and the
+   ▼/▲ arrow back out of each menu's parent.
+
+   This is what makes the dropdowns work as a group:
+   opening one closes the other, and clicking outside
+   the navbar closes everything.
+*/
+
+function closeAllDropdowns(exceptMenu = null) {
+
+    document
+        .querySelectorAll(
+            ".dropdown-menu.show, .mobile-dropdown-menu.show"
+        )
+        .forEach(menu => {
+
+            // Keep the menu that just opened.
+            if (exceptMenu && menu === exceptMenu) {
+                return;
+            }
+
+            // Find the trigger button that belongs to this menu
+            // (desktop: <li class="dropdown">, mobile: <div class="mobile-dropdown">).
+            const wrapper = menu.parentElement;
+
+            const trigger =
+                wrapper
+                    ? wrapper.querySelector("button")
+                    : null;
+
+            const arrow =
+                trigger
+                    ? trigger.querySelector(".dropdown-arrow")
+                    : null;
+
+            closeDropdown(trigger, menu, arrow);
+
+        });
+
+}
+
+
+/*
+   Wire up the About dropdown in both navbars (one in the
+   desktop navbar, one inside the mobile menu). Thanks to
+   closeAllDropdowns() they stay in sync while each keeps
+   its own button/menu ids.
+*/
+
+function initDropdowns() {
+
+    // Desktop navbar (visible on screens wider than 700px)
+    initDropdown("dropdownBtn", "dropdownMenu");
+
+    // Mobile menu (shown on small screens)
+    initDropdown("mobileDropdownBtn", "mobileDropdownMenu");
 
 }
 

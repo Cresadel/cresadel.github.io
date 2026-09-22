@@ -63,23 +63,64 @@
             <!-- DESKTOP NAVIGATION -->
             <nav class="desktop-nav" aria-label="Main Navigation">
 
-                <a href="index.html" class="active">
-                    Home
-                </a>
+                    <ul class="nav-list">
 
-                <a href="work.html">
-                    Work
-                </a>
+                        <li>
+                            <a href="index.html" class="active">
+                                Home
+                            </a>
+                        </li>
 
-                <a href="about.html">
-                    About
-                </a>
+                        <li>
+                            <a href="work.html">
+                                Work
+                            </a>
+                        </li>
+                        <li class="dropdown">
 
-                <a href="contact.html">
-                    Contact
-                </a>
+                            <button
+                                type="button"
+                                id="dropdownBtn"
+                                class="dropdown-trigger"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                About
+                                <span class="dropdown-arrow">▼</span>
+                            </button>
 
-            </nav>
+                            <ul id="dropdownMenu" class="dropdown-menu">
+
+                                <li>
+                                    <a href="about.html#where-i-came-from">
+                                        Where I Came From
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="about.html#my-journey">
+                                        My Journey
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="about.html#memories">
+                                        Memories
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
 
 
             <!-- NAV ACTIONS -->
@@ -125,10 +166,44 @@
                 Work
             </a>
 
-            <a href="about.html">
-                <span>03</span>
-                About
-            </a>
+            <!-- MOBILE DROPDOWN — ABOUT -->
+            <div class="mobile-dropdown">
+
+                <button
+                    type="button"
+                    id="mobileDropdownBtn"
+                    class="mobile-dropdown-trigger"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    <span>03</span>
+                    About
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+
+                <ul id="mobileDropdownMenu" class="mobile-dropdown-menu">
+
+                    <li>
+                        <a href="about.html#where-i-came-from">
+                            Where I Came From
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html#my-journey">
+                            My Journey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html#memories">
+                            Memories
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
 
             <a href="contact.html">
                 <span>04</span>

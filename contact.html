@@ -136,25 +136,68 @@
                 aria-label="Main Navigation"
             >
 
-                <a href="index.html">
-                    Home
-                </a>
+                <ul class="nav-list">
 
-                <a href="work.html">
-                    Work
-                </a>
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
 
-                <a href="about.html">
-                    About
-                </a>
+                    <li>
+                        <a href="work.html">
+                            Work
+                        </a>
+                    </li>
 
-                <a
-                    href="contact.html"
-                    class="active"
-                    aria-current="page"
-                >
-                    Contact
-                </a>
+                    <li class="dropdown">
+
+                        <button
+                            type="button"
+                            id="dropdownBtn"
+                            class="dropdown-trigger"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            About
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+
+                        <ul id="dropdownMenu" class="dropdown-menu">
+
+                            <li>
+                                <a href="about.html#where-i-came-from">
+                                    Where I Came From
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="about.html#my-journey">
+                                    My Journey
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="about.html#memories">
+                                    Memories
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="active"
+                            aria-current="page"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
 
             </nav>
 
@@ -224,25 +267,49 @@
 
 
             <a href="work.html">
-
-                <span>
-                    02
-                </span>
-
+                <span>02</span>
                 Work
-
             </a>
 
 
-            <a href="about.html">
+            <!-- MOBILE DROPDOWN — ABOUT -->
+            <div class="mobile-dropdown">
 
-                <span>
-                    03
-                </span>
+                <button
+                    type="button"
+                    id="mobileDropdownBtn"
+                    class="mobile-dropdown-trigger"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    <span>03</span>
+                    About
+                    <span class="dropdown-arrow">▼</span>
+                </button>
 
-                About
+                <ul id="mobileDropdownMenu" class="mobile-dropdown-menu">
 
-            </a>
+                    <li>
+                        <a href="about.html#where-i-came-from">
+                            Where I Came From
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html#my-journey">
+                            My Journey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html#memories">
+                            Memories
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
 
 
             <a

@@ -303,19 +303,34 @@ body.dark-mode .navbar.scrolled {
 .desktop-nav {
     display: flex;
     align-items: center;
-    gap: 38px;
     margin-inline: auto;
 }
 
-.desktop-nav a {
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    list-style: none;
+}
+
+.nav-list > li {
     position: relative;
+}
+
+.nav-list > li > a,
+.dropdown-trigger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 14px;
     font-weight: 600;
     color: var(--text-soft);
-    transition: var(--transition);
+    transition: color var(--transition);
 }
 
-.desktop-nav a::after {
+.nav-list > li > a::after,
+.dropdown-trigger::after {
     content: "";
     position: absolute;
     left: 0;
@@ -326,14 +341,100 @@ body.dark-mode .navbar.scrolled {
     transition: var(--transition);
 }
 
-.desktop-nav a:hover,
-.desktop-nav a.active {
+.nav-list > li > a:hover,
+.nav-list > li > a.active,
+.dropdown-trigger:hover {
     color: var(--text);
 }
 
-.desktop-nav a:hover::after,
-.desktop-nav a.active::after {
+.nav-list > li > a:hover::after,
+.nav-list > li > a.active::after,
+.dropdown-trigger:hover::after {
     width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   DROPDOWN MENUS (desktop) — vanilla JS toggles .show
+   --------------------------------------------------------- */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger .dropdown-arrow {
+    font-size: 10px;
+    color: var(--accent);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 230px;
+    padding: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow);
+    list-style: none;
+    z-index: 100;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Little carved notch that points up at the trigger */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-soft);
+    transition: var(--transition);
+}
+
+.dropdown-menu li a:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+/* Placeholder items (href="#" + "(coming soon)").
+   Sized and spaced like real links, but clearly greyed out
+   and not hover-reactive, so they read as "not built yet". */
+.dropdown-menu li a.is-placeholder {
+    opacity: .55;
+    cursor: default;
+}
+
+.dropdown-menu li a.is-placeholder:hover {
+    background: transparent;
+    color: var(--text-soft);
+}
+
+.dropdown-menu li a .coming-soon {
+    margin-left: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    opacity: .7;
+    letter-spacing: .3px;
 }
 
 .nav-actions {
@@ -384,6 +485,91 @@ body.dark-mode .navbar.scrolled {
 
 .menu-toggle.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ---------------------------------------------------------
+   DROPDOWN MENUS (inside the mobile menu)
+   The same .dropdown-arrow & .show pattern as desktop,
+   re-styled to match the mobile menu's stacked rows.
+   --------------------------------------------------------- */
+
+.mobile-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: left;
+    transition: color var(--transition);
+}
+
+.mobile-dropdown-trigger:hover {
+    color: var(--accent);
+}
+
+.mobile-dropdown-trigger span {
+    font-size: 11px;
+    color: var(--accent);
+}
+
+.mobile-dropdown-trigger .dropdown-arrow {
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform var(--transition);
+}
+
+.mobile-dropdown-menu {
+    display: none;
+    list-style: none;
+    padding-bottom: 14px;
+}
+
+.mobile-dropdown-menu.show {
+    display: block;
+}
+
+.mobile-dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 0 12px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-soft);
+    border-bottom: 1px dashed var(--border);
+    transition: color var(--transition);
+}
+
+.mobile-dropdown-menu li:last-child a {
+    border-bottom: 0;
+}
+
+.mobile-dropdown-menu li a:hover {
+    color: var(--accent);
+}
+
+/* Mobile version of the same placeholder treatment. */
+.mobile-dropdown-menu li a.is-placeholder {
+    opacity: .55;
+    cursor: default;
+}
+
+.mobile-dropdown-menu li a.is-placeholder:hover {
+    color: var(--text-soft);
+}
+
+.mobile-dropdown-menu li a .coming-soon {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: .7;
+    letter-spacing: .3px;
+    flex-shrink: 0;
 }
 
 
@@ -2109,6 +2295,33 @@ body.dark-mode .cursor-glow {
     gap: 20px;
 }
 
+/* Group wrapper used to anchor dropdown links (work.html#web-dev).
+   Spans the full grid width and keeps the same 2-column layout. */
+.project-group {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    scroll-margin-top: 110px;
+}
+
+.project-group-title {
+    grid-column: 1 / -1;
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+/* Dropdown anchor targets stay visible below the fixed navbar */
+#where-i-came-from,
+#my-journey,
+#memories {
+    scroll-margin-top: 110px;
+}
+
 .project-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -3078,6 +3291,10 @@ body.dark-mode .cursor-glow {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-group {
         grid-template-columns: 1fr;
     }
 
