@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="robots"
+        content="noindex"
+    >
+
+    <title>Page Not Found | Cresadel M. Dela Cruz</title>
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="./favicon.svg"
+    >
+
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: #f6f3eb;
+            color: #1b1b1f;
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #3157a4;
+            font-weight: 600;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #0c0c11;
+                color: #f1f1f3;
+            }
+
+            a {
+                color: #9db8ff;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <p>This page has moved. <a href="./#/">Go to the portfolio</a>.</p>
+    </main>
+
+    <script>
+        (function () {
+            var path = window.location.pathname.replace(/\/+$/, "");
+            var last = path.split("/").pop().toLowerCase();
+
+            var routes = {
+                "about": "/about",
+                "about.html": "/about",
+                "work": "/work",
+                "work.html": "/work",
+                "contact": "/contact",
+                "contact.html": "/contact"
+            };
+
+            var known = Object.prototype.hasOwnProperty.call(routes, last);
+            var route = known ? routes[last] : "/";
+            var base = path ? path.slice(0, path.length - last.length) : "/";
+            var hash = known ? (window.location.hash || "") : "";
+
+            window.location.replace(base + "#" + route + hash);
+        })();
+    </script>
+
+</body>
+
+</html>
