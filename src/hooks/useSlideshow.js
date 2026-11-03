@@ -1,3 +1,9 @@
+/**
+ * 🪟 Hook sa slideshow: nagdulong index, navigation (next/previous),
+ * autoplay interval, atong reduced‑motion support.
+ * - reducedMotion: i‑disable ang autoplay kung OS nag‑request og reduced motion.
+ * - Auto‑cleanup: clearInterval nang unmount.
+ */
 import { useCallback, useEffect, useState } from "react";
 
 function useReducedMotion() {
@@ -19,7 +25,8 @@ export default function useSlideshow(length, interval = 5000) {
     const [paused, setPaused] = useState(false);
     const [autoPlay, setAutoPlay] = useState(true);
 
-    const reducedMotion = useReducedMotion();
+    // Reduced‑motion: i‑disable autoplay kung ang OS nag‑request og prefers‑reduced‑motion: reduce.
+const reducedMotion = useReducedMotion();
 
     useEffect(() => {
         if (reducedMotion) {
@@ -27,11 +34,13 @@ export default function useSlideshow(length, interval = 5000) {
         }
     }, [reducedMotion]);
 
-    const next = useCallback(() => {
+    // Mag‑ulit ang index pagkatapos ng slide
+const next = useCallback(() => {
         setIndex((current) => (current + 1) % length);
     }, [length]);
 
-    const previous = useCallback(() => {
+    // Mag‑balik ang index pagkatapos ng slide
+const previous = useCallback(() => {
         setIndex((current) => (current - 1 + length) % length);
     }, [length]);
 

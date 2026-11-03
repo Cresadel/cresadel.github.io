@@ -1,3 +1,8 @@
+/**
+ * 📔 Navbar – desktop + mobile navigation, dropdowns,
+ * theme toggle, aria‑labels, Escape close, scroll‑handling,
+ * atong refs para sa outside‑click detection.
+ */
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 

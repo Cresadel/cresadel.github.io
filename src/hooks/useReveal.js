@@ -1,3 +1,8 @@
+/**
+ * 👁️‍🗨️ Hook nag‑reveal sa elements with class `.reveal`.
+ * Gamit ang IntersectionObserver ug staggered timers para sa hero area.
+ * Nagsasagawa ng cleanup sa unmount (disconnect observer, clear timers).
+ */
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -20,7 +25,8 @@ export default function useReveal(ready) {
             return undefined;
         }
 
-        const observer = new IntersectionObserver(
+        // Threshold 0.12: run callback kapag 12% sa viewport naa.
+const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {

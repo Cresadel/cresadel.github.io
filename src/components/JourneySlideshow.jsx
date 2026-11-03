@@ -1,3 +1,7 @@
+/**
+ * 📖 JourneySlideshow – college diary slider, pause/play,
+ * keyboard navigation, aria‑live, atong reduced‑motion support.
+ */
 import useSlideshow from "../hooks/useSlideshow";
 import SafeImage from "./SafeImage";
 

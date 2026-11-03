@@ -1,3 +1,7 @@
+/**
+ * 📄 App component – central router, metadata, loader, theme,
+ * and glue for reveal, scroll, and skip‑link behaviour.
+ */
 import { useCallback, useEffect, useState } from "react";
 import {
     Navigate,

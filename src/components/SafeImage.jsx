@@ -1,3 +1,8 @@
+/**
+ * 🖼️ SafeImage – wraps an <img> with lazy loading,
+ * error‑class fallback, atong BASE_URL gamit ang asset().
+ * Accepts optional className, loading, ug extra props (...rest).
+ */
 import { asset } from "../utils/assets";
 
 export default function SafeImage({

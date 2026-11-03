@@ -1,3 +1,7 @@
+/**
+ * ⏳ Loader – body scroll lock, finishedRef guard,
+ * load + fallback timers, atong aria‑hidden pagsunod.
+ */
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function Loader({

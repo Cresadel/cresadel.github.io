@@ -1,3 +1,7 @@
+/**
+ * 🖼️ PlaceSlideshow – homestyled slider dengan pause/play,
+ * keyboard (←/→/Space), aria‑live, atong reduced‑motion support.
+ */
 import useSlideshow from "../hooks/useSlideshow";
 import SafeImage from "./SafeImage";
 

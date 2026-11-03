@@ -1,3 +1,8 @@
+/**
+ * 🌐 Main entry point for the Cresadel portfolio.
+ * Bootstrap React, enable StrictMode, and apply saved theme.
+ * Uses HashRouter for GitHub Pages static hosting.
+ */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
