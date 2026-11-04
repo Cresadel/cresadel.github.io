@@ -23,21 +23,24 @@ export default function Home() {
                     <div className="hero-content">
                         <div className="eyebrow reveal">
                             <span className="eyebrow-line"></span>
-                            <span>Student • Creator • Dreamer</span>
+                            <span>Student · Creator · Still Becoming</span>
                         </div>
 
                         <h1 className="hero-title reveal">
                             Hi, I&apos;m <span className="name">Cresadel.</span>
                             <br />
-                            <span className="outline-text">Still learning.</span>
+                            <span className="outline-text">
+                                Learning as I go.
+                            </span>
                             <br />
-                            Still becoming.
+                            Becoming who I am.
                         </h1>
 
                         <p className="hero-description reveal">
-                            A college student who loves learning, creating,
-                            exploring ideas, and turning little sparks of
-                            inspiration into something meaningful.
+                            A third-year college student finding meaning in
+                            small lessons, quiet ideas, and the slow work of
+                            becoming — one project, one memory, one day at a
+                            time.
                         </p>
 
                         <div className="hero-buttons reveal">
@@ -50,7 +53,7 @@ export default function Home() {
                             </Link>
 
                             <Link to="/about" className="btn btn-outline">
-                                <span>My story</span>
+                                <span>Read my story</span>
                                 <i
                                     className="fa-solid fa-arrow-right"
                                     aria-hidden="true"
@@ -71,7 +74,7 @@ export default function Home() {
                                     className="fa-regular fa-heart"
                                     aria-hidden="true"
                                 ></i>
-                                <span>Learning &amp; Growing</span>
+                                <span>Always learning, always growing</span>
                             </div>
                         </div>
                     </div>
@@ -79,7 +82,7 @@ export default function Home() {
                     <div className="hero-visual reveal">
                         <div className="orbit orbit-one">
                             <div className="orbit-text">
-                                ✦ LEARN ✦ CREATE ✦ GROW ✦
+                                ✦ CURIOSITY ✦ GROWTH ✦ GRACE ✦
                             </div>
                         </div>
 
@@ -99,8 +102,8 @@ export default function Home() {
                             <span className="floating-number">01</span>
 
                             <div>
-                                <small>Currently</small>
-                                <strong>Growing</strong>
+                                <small>Now</small>
+                                <strong>Becoming</strong>
                             </div>
                         </div>
                     </div>
