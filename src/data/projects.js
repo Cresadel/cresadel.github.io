@@ -36,6 +36,19 @@ export const webProjects = [
             "An interactive web-based game built around programming logic, problem-solving, and engaging gameplay.",
         tags: ["HTML", "CSS", "JavaScript", "Web Game"],
         demoUrl: "https://cresadel.github.io/CFG_GAME/"
+    },
+    {
+        number: "04",
+        categoryKey: "programming",
+        category: "Programming",
+        title: "SplitMate",
+        image: "images/works/splitmate-login.png",
+        imageAlt: "SplitMate login screen",
+        description:
+            "A clean, responsive login interface for SplitMate, a bill-splitting app concept that helps friends plan, split, and settle shared costs.",
+        tags: ["React", "CSS", "Responsive UI"],
+        demoUrl: "https://cresadel.github.io/splitmate/login",
+        codeUrl: "https://github.com/Cresadel/splitmate"
     }
 ];
 

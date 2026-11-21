@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const WORK_LINKS = [
-    { label: "Projects", to: "/work#projects" },
+    { label: "Projects", to: "/work" },
     { label: "Web Development", to: "/work#web-dev" },
     { label: "Mobile Development", to: "/work#mobile-dev" }
 ];
